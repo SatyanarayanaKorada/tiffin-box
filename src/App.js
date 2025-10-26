@@ -213,7 +213,7 @@ const About = () => {
 // --- 4. Popular Dishes ---
 const PopularDishes = () => {
   const dishes = [
-    { name: 'CHICKEN CHETTINAD', price: '£9.99', img: 'https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'PALAK PANNER', price: '£9.99', img: 'https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg?auto=compress&cs=tinysrgb&w=600' },
     { name: 'MASALA DOSA', price: '£7.99', img: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=600' },
     { name: 'CHICKEN BIRIYANI', price: '£8.99', img: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600' },
   ];
@@ -289,7 +289,7 @@ const DualCta = () => {
           {/* Image first on mobile, text first on desktop */}
           <div className="min-h-[300px] md:min-h-[450px] order-1 md:order-2">
             <img 
-              src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img6.png"
               alt="Restaurant table setting"
               className="w-full h-full object-cover"
             />
