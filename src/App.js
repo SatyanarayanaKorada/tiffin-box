@@ -36,8 +36,6 @@ const StarIcon = ({ filled = true }) => (
   </svg>
 );
 
-// --- Global Components ---
-// This is a reusable component for all the "CTA" links
 const CtaLink = ({ text }) => (
   <a
     href="#"
@@ -47,8 +45,6 @@ const CtaLink = ({ text }) => (
     <ArrowRightIcon />
   </a>
 );
-
-// Reusable component for section headings
 const SectionHeading = ({ sub, main }) => (
   <div className="text-center mb-12">
     <p className="text-brand-yellow font-heading text-sm tracking-widest mb-2">{sub}</p>
