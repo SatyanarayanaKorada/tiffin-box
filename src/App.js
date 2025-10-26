@@ -170,7 +170,7 @@ const About = () => {
         {/* Image Side - Placeholder */}
         <div className="min-h-[300px] md:min-h-[500px]">
           <img 
-            src="https://images.pexels.com/photos/1683989/pexels-photo-1683989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img3.png"
             alt="Chef and team"
             className="w-full h-full object-cover"
           />
@@ -439,7 +439,7 @@ const Locations = () => {
       {/* Placeholder for map */}
       <div className="min-h-[400px] md:min-h-[600px] bg-gray-900 flex items-center justify-center relative">
         <img 
-          src="https://i.imgur.com/gKHYfex.png" // Placeholder map from design
+          src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img4.png" // Placeholder map from design
           alt="Map"
           className="w-full h-full object-cover" 
         />
