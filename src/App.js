@@ -184,7 +184,7 @@ const About = () => {
         {/* Image Side - Placeholder */}
         <div className="min-h-[300px] md:min-h-[500px]">
           <img 
-            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img3.png"
+            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img2.png"
             alt="Chef and team"
             className="w-full h-full object-cover"
           />
@@ -274,11 +274,13 @@ const DualCta = () => {
             <CtaLink text="Order Online" />
           </div>
           <div className="relative h-64 md:h-96">
+             
             {/* Placeholder for line art */}
             <p className="text-9xl text-gray-700 text-center opacity-30">🛵</p>
-            <div className="absolute top-10 right-20 w-24 h-24 rounded-full overflow-hidden">
-                <img src="https://images.pexels.com/photos/103566/pexels-photo-103566.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Food item" className="w-full h-full object-cover" />
-            </div>
+            {/* <img src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img3.png"/> */}
+            {/* <div className="absolute top-10 right-20 w-24 h-24 rounded-full overflow-hidden">
+                <img src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img3.png" />
+            </div> */}
           </div>
         </div>
         
@@ -556,7 +558,6 @@ const Footer = () => {
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
-    console.log('Scroll position:', window.scrollY);
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
