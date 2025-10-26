@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // --- SVG Icons ---
 // Using inline SVGs for performance and easy styling
@@ -60,6 +60,9 @@ const SectionHeading = ({ sub, main }) => (
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMobileLinkClick = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <header className="absolute top-0 left-0 right-0 z-50 p-6 md:p-8">
       <div className="container mx-auto flex justify-between items-center">
@@ -81,7 +84,6 @@ const Header = () => {
 </svg> */}
 
         </a>
-
         {/* "View Menu" Button (Desktop) */}
         <a 
           href="#" 
@@ -102,11 +104,13 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-brand-dark flex flex-col items-center justify-center space-y-8 z-40">
-          <a href="#" className="text-2xl font-heading text-white">MENU</a>
-          <a href="#" className="text-2xl font-heading text-white">ORDER ONLINE</a>
-          <a href="#" className="text-2xl font-heading text-white">BOOK A TABLE</a>
-          <a href="#" className="text-2xl font-heading text-white">ABOUT US</a>
-          <a href="#" className="text-2xl font-heading text-white">CONTACT</a>
+          <a href="#menu" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>MENU</a>
+          <a href="#order" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>ORDER ONLINE</a>
+          <a href="#book" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>BOOK A TABLE</a>
+          <a href="#about" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>ABOUT US</a>
+          <a href="#contact" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>CONTACT</a>
+          <a href="#locations" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>LOCATE US</a>
+          <a href="#reviews" className="text-2xl font-heading text-white" onClick={handleMobileLinkClick}>REVIEWS</a>
         </div>
       )}
     </header>
@@ -150,6 +154,16 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="w-full md:w-1/2">
+        <svg width="86" height="106" viewBox="0 0 86 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM31.3982 15.5686L31.1988 23.7096C32.2831 22.1629 34.2559 21.2713 36.4572 21.3296C40.4282 21.4169 41.9151 23.4221 41.828 26.8357L41.5996 35.952L37.5125 35.8647L37.712 27.6655C37.741 26.0314 37.0556 24.9142 34.9993 24.856C33.0011 24.7977 31.6267 25.8895 31.0863 27.4944L30.8869 35.6645L26.7744 35.5772L27.2604 15.565H4.573V43.0594H85.4875V15.5686H31.3982ZM19.4852 35.8392C16.1125 35.7518 14.4008 33.9468 14.4552 31.1664L14.6257 23.9971L11.1116 23.5095L11.1696 21.1585L14.6837 21.2458L14.7707 17.603L18.8832 17.7194L18.7961 21.3623L23.623 21.4788L23.565 24.23L18.7381 24.1136L18.5677 30.7079C18.5387 31.8542 19.0246 32.8004 20.3664 32.8295C21.6792 32.8586 22.6801 32.6876 23.7391 32.3419L24.4535 35.3806C23.1407 35.6973 21.5124 35.8974 19.4815 35.8392H19.4852ZM59.772 30.2202L48.9142 29.9618C48.9722 31.7669 50.4011 33.0588 52.8562 33.117C54.4555 33.1461 56.0838 32.8586 57.2842 32.2873L58.8545 35.4971C57.2262 36.3268 55.1699 36.7308 52.6531 36.6726C47.5978 36.5561 44.6531 33.7211 44.7691 29.0156C44.8852 24.4557 47.6268 21.6171 52.6822 21.7626C57.6831 21.8791 59.8808 24.8305 59.7683 29.3905V30.2202H59.772ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889ZM52.5407 25.0889C50.256 25.0307 49.0556 26.4063 48.9106 27.7273L55.7973 27.8984C55.8263 26.5519 54.7384 25.118 52.5407 25.0889Z" fill="#FCB017"/>
+<path d="M0.257482 46.3602L0.170446 56.8558H3.42704V53.1001H7.68456V56.8558H12.7145V59.7235H7.68456V66.5762C7.68456 67.7516 8.19952 68.7269 9.59935 68.7269C10.9992 68.7269 12.0001 68.5268 13.0844 68.1265L13.9113 71.2817C12.5404 71.6529 10.8541 71.9113 8.73987 71.9113C5.22579 71.9113 3.39803 70.0771 3.39803 67.1803V59.7526L0.141434 59.3814L0 73.8874L80.8565 75.2339L81.1139 47.7395L0.257482 46.3602ZM20.5695 71.42H16.312V56.8558H20.5695V71.42ZM20.5695 54.3592H16.312V50.0868H20.5695V54.3592ZM49.2007 53.6459C48.1418 53.2456 47.0575 53.0164 45.6867 53.0164C44.2288 53.0164 43.5724 54.079 43.5724 55.1963V56.8594H48.6277V59.7271H43.5978V71.4236H39.3693V59.7271H31.5107V71.4236H27.2822V59.7271L23.6267 59.3268V56.8594H27.2822V54.6213C27.2822 51.7244 29.226 49.8611 32.7691 49.8611C35.1408 49.8611 36.6277 50.0904 37.8824 50.5198L37.11 53.6751C36.051 53.2747 34.9667 53.0455 33.5959 53.0455C32.1381 53.0455 31.4817 54.1081 31.4817 55.2254V56.8885H39.3403V54.6504C39.3403 51.7535 41.2841 49.8903 44.8272 49.8903C47.1699 49.8903 48.6568 50.1195 49.9405 50.549L49.1971 53.6459H49.2007ZM55.5725 71.42H51.373V56.8558H55.5725V71.42ZM55.5725 54.3592H51.373V50.0868H55.5725V54.3592ZM75.8845 71.42H71.656V62.9333C71.656 61.241 70.8836 60.0947 68.7693 60.0947C66.6551 60.0947 65.3133 61.241 64.7693 62.9333V71.42H60.5118V56.8558H63.7104L64.1093 59.2358C65.2226 57.5727 67.4819 56.3972 69.8537 56.3972C74.0531 56.3972 75.8809 58.4315 75.8809 61.958V71.42H75.8845Z" fill="#FCB017"/>
+<path d="M51.9424 91.3485C52.0294 93.6121 50.742 95.4499 48.1708 95.5336C45.6286 95.6209 44.1998 93.8413 44.1127 91.6068C44.0547 89.3687 45.3711 87.5054 47.9133 87.4217C50.4845 87.3344 51.8843 89.114 51.9424 91.3485Z" fill="#FCB017"/>
+<path d="M25.6865 78.502L25.944 86.8758C26.9739 85.3292 28.4571 84.3247 30.7708 84.2665C35.2278 84.1246 37.7119 87.4508 37.828 91.8361C37.9694 96.1668 35.8008 99.6641 31.1407 99.806C28.5986 99.8934 26.6838 98.8598 25.5414 97.1676L25.3129 99.5185L22.2848 99.6059L21.6284 78.502H3.91296V105.996H84.7984V78.502H25.6865ZM48.3122 99.231C43.1408 99.4021 40.2541 96.4798 40.1127 91.7197C39.9713 86.9595 42.6839 83.8625 47.8553 83.7206C53.0267 83.5496 55.8843 86.4719 56.0258 91.232C56.1418 95.9921 53.4546 99.0891 48.3122 99.231ZM70.0277 98.1138L65.6287 92.866H65.3423L61.2552 98.3722L58.2851 98.4595L58.198 95.2497L62.1401 90.8899L58.198 87.0469L58.0566 83.8371L61.0557 83.7497L65.1682 88.7682H65.4547L69.2552 83.5205L72.2544 83.4331L72.3704 86.672L68.6279 90.7443L72.8274 94.8458L72.9434 98.0847L70.0277 98.1138ZM76.715 97.9136L76.5989 93.8122L80.4575 93.6958L80.5736 97.7681L76.715 97.91V97.9136Z" fill="#FCB017"/>
+<path d="M65.7702 12.2715H62.0567V6.82357C62.0567 5.10221 60.6858 3.72658 58.9705 3.72658H29.7409C28.0256 3.72658 26.6548 5.10221 26.6548 6.82357V12.2715H22.9412V6.30679C22.9412 2.80949 25.7699 0 29.2259 0H59.4818C62.9669 0 65.7666 2.8386 65.7666 6.30679V12.2715H65.7702Z" fill="#FCB017"/>
+<path d="M33.799 91.9198C33.857 94.1834 32.5406 96.0212 29.9694 96.1049H29.4254C29.1099 96.0758 28.798 96.0176 28.5115 95.9339C28.4245 95.9048 28.3121 95.8757 28.225 95.8465C28.138 95.8174 28.0546 95.7592 27.9386 95.7301C26.6258 95.0714 25.7953 93.6958 25.7953 92.0872C25.7953 89.8491 27.4526 88.044 29.5959 88.044H29.7119C32.2831 87.9021 33.7119 89.6489 33.799 91.9162V91.9198Z" fill="#FCB017"/>
+<path d="M29.4 96.0795C29.0845 96.0795 28.7726 96.0212 28.4861 95.9084C28.7726 95.9958 29.0845 96.0503 29.4 96.0795Z" fill="#FCB017"/>
+</svg>
+
           <h1 className="text-5xl md:text-7xl font-heading text-white leading-tight">
             AUTHENTIC SOUTH INDIAN CUISINE
           </h1>
@@ -201,7 +215,7 @@ const PopularDishes = () => {
   const dishes = [
     { name: 'CHICKEN CHETTINAD', price: '£9.99', img: 'https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg?auto=compress&cs=tinysrgb&w=600' },
     { name: 'MASALA DOSA', price: '£7.99', img: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'PANEER TIKKA', price: '£8.99', img: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'CHICKEN BIRIYANI', price: '£8.99', img: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600' },
   ];
 
   return (
@@ -220,7 +234,7 @@ const PopularDishes = () => {
 
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div id="menu" className="container mx-auto px-6 relative z-10">
         <SectionHeading sub="FEATURED MENU" main="DISCOVER OUR MOST POPULAR DISHES" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {dishes.map((dish, index) => (
@@ -250,8 +264,8 @@ const DualCta = () => {
         {/* Box 1: Online Order */}
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 mb-20">
           <div className="text-center md:text-left">
-            <p className="text-brand-yellow font-heading text-sm tracking-widest mb-2">ONLINE ORDER</p>
-            <h2 className="text-4xl md:text-5xl font-heading text-white mb-6">
+            <p id="order" className="text-brand-yellow font-heading text-sm tracking-widest mb-2">ONLINE ORDER</p>
+            <h2 className="text-4xl md:text-5xl font-heading text-white mb-6 id=menu">
               FRESH SOUTH INDIAN FLAVORS DELIVERED!
             </h2>
             <p className="text-brand-muted mb-8 max-w-md mx-auto md:mx-0">
@@ -323,9 +337,9 @@ const Specialties = () => {
           </div>
           
           {/* Center Image - Placeholder */}
-          <div className="flex items-center justify-center relative">
+          <div className="i6i flex items-center justify-center relative">
             <img 
-              src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img5.png"
               alt="Specialty Dish"
               className="rounded-full w-64 h-64 md:w-96 md:h-96 object-cover border-4 border-brand-yellow/50"
             />
@@ -397,7 +411,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-24 bg-brand-dark">
-      <div className="container mx-auto px-6">
+      <div id="reviews" className="container mx-auto px-6">
         <SectionHeading sub="TESTIMONIAL" main="WHAT OUR CUSTOMERS SAYS" />
         
         {/* On mobile, this will scroll horizontally */}
@@ -427,7 +441,7 @@ const Testimonials = () => {
 const Locations = () => {
   return (
     <section className="bg-brand-gray grid grid-cols-1 md:grid-cols-2">
-      <div className="flex items-center justify-center p-12 md:p-24">
+      <div id="locations" className="flex items-center justify-center p-12 md:p-24">
         <div>
           <p className="text-brand-yellow font-heading text-sm tracking-widest mb-2">OUR LOCATIONS</p>
           <h2 className="text-4xl md:text-5xl font-heading text-white mb-8">
@@ -510,7 +524,7 @@ const Footer = () => {
         </div>
         
         {/* Footer Info */}
-        <div className="text-center text-brand-muted mb-12">
+        <div id ="contact" className="text-center text-brand-muted mb-12">
           <p className="font-heading tracking-wider">CONTACT</p>
           <p>+44 7587 114100</p>
           <p>INFO@TIFFINBOX.CO.UK</p>
@@ -519,18 +533,66 @@ const Footer = () => {
         
         {/* Footer Nav */}
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white uppercase font-heading tracking-wider">
-          <a href="#" className="hover:text-brand-yellow">MENU</a>
+          <a href="#menu" className="hover:text-brand-yellow">MENU</a>
           <span>|</span>
-          <a href="#" className="hover:text-brand-yellow">ORDER ONLINE</a>
+          <a href="#order" className="hover:text-brand-yellow">ORDER ONLINE</a>
           <span>|</span>
-          <a href="#" className="hover:text-brand-yellow">BOOK A TABLE</a>
+          <a href="#book" className="hover:text-brand-yellow">BOOK A TABLE</a>
           <span>|</span>
-          <a href="#" className="hover:text-brand-yellow">ABOUT US</a>
+          <a href="#about" className="hover:text-brand-yellow">ABOUT US</a>
           <span>|</span>
-          <a href="#" className="hover:text-brand-yellow">CONTACT</a>
+          <a href="#contact" className="hover:text-brand-yellow">CONTACT</a>
+          <span>|</span>
+          <a href="#locations" className="hover:text-brand-yellow">LOCATE US</a>
+          <span>|</span>
+          <a href="#reviews" className="hover:text-brand-yellow">REVIEWS</a>
         </nav>
       </div>
     </footer>
+  );
+};
+
+// --- 12. Scroll To Top Button ---
+const ScrollToTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    console.log('Scroll position:', window.scrollY);
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className={`
+        fixed bottom-6 right-6 z-50 p-3
+        bg-brand-yellow text-brand-dark rounded-full
+        shadow-lg transition-all duration-300
+        hover:bg-yellow-400 transform hover:scale-110
+        ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+      `}
+    >
+      {/* This is the SVG for the UP arrow */}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-align-top" viewBox="0 0 16 16">
+  <rect width="4" height="12" rx="1" transform="matrix(1 0 0 -1 6 15)"/>
+  <path d="M1.5 2a.5.5 0 0 1 0-1zm13-1a.5.5 0 0 1 0 1zm-13 0h13v1h-13z"/>
+</svg>
+    </button>
   );
 };
 

@@ -10,11 +10,23 @@ body {
   @apply bg-brand-dark text-brand-light font-body;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .i5i{
   /* 2147894625 1 */
 position: absolute;
 width: 847.8px;
 height: 645.3px;
 top: 105px;
-content: url("https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/image.png");
+content: url("https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/main/src/assets/img1.png");
+}
+.grid img{
+  height: 500px;
+  width: 600px;
+  /* padding-left: 100px; */
+}
+.i6i img{
+  
 }
