@@ -194,9 +194,9 @@ const About = () => {
 // --- 4. Popular Dishes ---
 const PopularDishes = () => {
   const dishes = [
-    { name: 'CHICKEN CHETTINAD', price: '£9.99', img: 'https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'PANEER BUTTER MASALA', price: '£9.99', img: 'https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg?auto=compress&cs=tinysrgb&w=600' },
     { name: 'MASALA DOSA', price: '£7.99', img: 'https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { name: 'PANEER TIKKA', price: '£8.99', img: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { name: 'CHICKEN BIRIYANI', price: '£8.99', img: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600' },
   ];
 
   return (
