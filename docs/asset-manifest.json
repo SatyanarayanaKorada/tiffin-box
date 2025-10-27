@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SatyanarayanaKorada/tiffin-box.git/static/css/main.7e2a054b.css",
+    "main.js": "/SatyanarayanaKorada/tiffin-box.git/static/js/main.4a9c12ae.js",
+    "static/js/453.f873d70f.chunk.js": "/SatyanarayanaKorada/tiffin-box.git/static/js/453.f873d70f.chunk.js",
+    "index.html": "/SatyanarayanaKorada/tiffin-box.git/index.html",
+    "main.7e2a054b.css.map": "/SatyanarayanaKorada/tiffin-box.git/static/css/main.7e2a054b.css.map",
+    "main.4a9c12ae.js.map": "/SatyanarayanaKorada/tiffin-box.git/static/js/main.4a9c12ae.js.map",
+    "453.f873d70f.chunk.js.map": "/SatyanarayanaKorada/tiffin-box.git/static/js/453.f873d70f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e2a054b.css",
+    "static/js/main.4a9c12ae.js"
+  ]
+}

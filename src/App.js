@@ -16,11 +16,9 @@ const CloseIcon = ({ className }) => (
 const ArrowRightIcon = () => <span className="ml-2">›</span>;
 
 const InstagramIcon = () => (
-  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.053 1.905.24 2.49.446.58.205.975.47 1.48.976.504.504.77.898.976 1.48.206.585-.394 1.32-.446 2.49.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.24 1.905-.446 2.49-.205.58-.47.975-.976 1.48-.504.504-.898.77-1.48.976-.585.206-1.32.394-2.49.446-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.905-.24-2.49-.446-.58-.205-.975.47-1.48-.976-.504-.504-.77-.898-.976-1.48-.206.585-.394 1.32-.446 2.49-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.17.24-1.905.446-2.49.205-.58.47.975.976-1.48.504-.504.898.77-1.48.976.585.206-1.32.394-2.49.446C8.416 2.175-8.796 2.163-12 2.163m0-1.608c-3.264 0-3.66.014-4.944.072-1.28.058-2.16.25-2.924.518-.77.27-1.436.63-2.09 1.286-.656.656-1.017 1.32-1.286 2.09-.268.763-.46-1.643-.518-2.923-.058-1.284-.072-1.68-.072-4.944s.014-3.66.072-4.944c.058-1.28.25-2.16.518-2.923.27.77.63-1.436-1.286-2.09-.656.656-1.32-1.017-2.09-1.286-.763.268-1.643.46-2.923.518-1.284.058-1.68.072-4.944.072s3.66-.014 4.944-.072c1.28-.058-2.16-.25-2.923-.518.77-.27-1.436-.63-2.09-1.286.656-.656-1.017-1.32-1.286-2.09.268-.763.46-1.643.518-2.923.058-1.284.072-1.68.072-4.944s-.014-3.66-.072-4.944c-.058-1.28-.25-2.16-.518-2.923-.27-.77-.63-1.436-1.286-2.09-.656.656-1.32-1.017-2.09-1.286-.763-.268-1.643.46-2.923.518C15.66.566-15.264.554-12 .554z" />
-    <path d="M12 6.865A5.135 5.135 0 1017.135 12 5.135 5.135 0 0012 6.865zm0 8.73A3.595 3.595 0 1115.595 12 3.595 3.595 0 0112 15.595z" />
-    <circle cx="16.802" cy="7.198" r="1.218" />
-  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
 );
 
 const FacebookIcon = () => (
@@ -73,7 +71,7 @@ const Header = () => {
         {/* Logo */}
         <a href="/" className="z-50"> {/* Logo links to top of page */}
           <img 
-            src="https://i.imgur.com/gSnP1kK.png" 
+            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/logo.png" 
             alt="The Tiffin Box Logo" 
             className="w-20" 
           />
@@ -134,7 +132,7 @@ const Hero = () => {
       {/* Background Image (Right Half) - Placeholder */}
       <div className="absolute top-0 right-0 w-1/2 h-full hidden md:block">
         <img 
-          src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/dish.png"
           alt="Authentic Indian Cuisine"
           className="w-full h-full object-cover" 
         />
@@ -145,7 +143,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="w-full md:w-1/2">
           <img 
-            src="https://i.imgur.com/gSnP1kK.png"
+            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/logo.png"
             alt="The Tiffin Box Logo" 
             className="w-24 mb-6" 
           />
@@ -168,7 +166,7 @@ const About = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2">
         <div className="min-h-[300px] md:min-h-[500px]">
           <img 
-            src="https://images.pexels.com/photos/1683989/pexels-photo-1683989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/chefTeam.png"
             alt="Chef and team"
             className="w-full h-full object-cover"
           />
@@ -260,7 +258,7 @@ const DualCta = () => {
         <div id="book" className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
           <div className="min-h-[300px] md:min-h-[450px] order-1 md:order-2">
             <img 
-              src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/bookTable.png"
               alt="Restaurant table setting"
               className="w-full h-full object-cover"
             />
@@ -309,7 +307,7 @@ const Specialties = () => {
           {/* Center Image */}
           <div className="flex items-center justify-center relative">
             <img 
-              src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/OurSpecials.png"
               alt="Specialty Dish"
               className="rounded-full w-64 h-64 md:w-96 md:h-96 object-cover border-4 border-brand-yellow/50"
             />
@@ -416,7 +414,7 @@ const Locations = () => {
       </div>
       <div className="min-h-[400px] md:min-h-[600px] bg-gray-900 flex items-center justify-center relative">
         <img 
-          src="https://i.imgur.com/gKHYfex.png" 
+          src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/googleMap.png" 
           alt="Map"
           className="w-full h-full object-cover" 
         />
@@ -461,7 +459,7 @@ const Footer = () => {
         {/* Newsletter */}
         <div className="flex flex-col items-center text-center mb-20">
           <img 
-            src="https://i.imgur.com/gSnP1kK.png"
+            src="https://raw.githubusercontent.com/SatyanarayanaKorada/tiffin-box/refs/heads/master/src/assets/logo.png"
             alt="The Tiffin Box Logo" 
             className="w-24 mb-6" 
           />
