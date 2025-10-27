@@ -1,0 +1,16 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply the default font and background color */
+body {
+  @apply bg-brand-dark text-brand-light font-body;
+}
+
+/* Add this for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
